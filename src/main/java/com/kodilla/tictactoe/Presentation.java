@@ -1,10 +1,11 @@
 package com.kodilla.tictactoe;
 
 public class Presentation {
+
     public void gameStart() {
 
         System.out.println("""
-                Welcome to the game of Tic-Tac-Toe!.
+                Welcome to the game of Tic-Tac-Toe!
                 Please choose game type:
                 Normal 3x3 - press '1'
                 10x10 Board, need 5 to win - press '2'""");
@@ -24,18 +25,32 @@ public class Presentation {
         System.out.println(gameState);
     }
 
+    static void whoseTurnDisplay(int player) {
+        if (player == Logic.HUMAN) {
+            System.out.println("Player moves.");
+        }
+        if (player == Logic.CPU) {
+            System.out.println("CPU moves.");
+        }
+    }
+
     public void winnerDisplay(int winner) {
-        if (winner == 1) {
-            System.out.println("The winner is player 1");
+        if (winner == Logic.HUMAN) {
+            System.out.println("The winner is player 1 (HUMAN)\nThank you for playing!");
             Logic.end = true;
         }
-        if (winner == 2) {
-            System.out.println("The winner is player 2 (CPU)");
+        if (winner == Logic.CPU) {
+            System.out.println("The winner is player 2 (CPU)\nThank you for playing!");
             Logic.end = true;
         }
-        if (winner == 0) {
-            System.out.println("The game ends in a draw");
+        if (winner == Logic.DRAW) {
+            System.out.println("The game ends in a draw\nThank you for playing!");
             Logic.end = true;
         }
     }
+
+    static void placeIsTaken() {
+        System.out.println("This place is already taken. Try again");
+    }
+
 }

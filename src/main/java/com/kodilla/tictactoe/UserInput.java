@@ -4,31 +4,35 @@ import java.util.Scanner;
 
 public class UserInput {
 
-    static int rowSelection() {
-        System.out.println("Player moves.");
+    static int rowSelection(int boardLimit) {
         System.out.println("Which row do you choose?");
-        return userIntSelection(Logic.boardSize);
+        return userIntSelectionExceptionCheck(boardLimit);
     }
 
-    static int columnSelection() {
+    static int columnSelection(int boardLimit) {
         System.out.println("Which column?");
-        return userIntSelection(Logic.boardSize);
+        return userIntSelectionExceptionCheck(boardLimit);
     }
 
-    static int userIntSelection(int max) {
-        Scanner scanner = new Scanner(System.in);
+    static int userIntSelectionExceptionCheck(int max) {
         while (true) {
-            String sc = scanner.nextLine();
             try {
-                int r = Integer.parseInt(sc);
-                if (r > 0 && r <= max) {
-                    return r;
-                } else {
-                    System.out.println("Wrong input. Try again");
-                }
+                return userIntSelection(max);
             } catch (Exception e) {
                 System.out.println("Wrong input. Try again");
             }
         }
     }
+
+    static int userIntSelection(int max) throws Exception {
+        Scanner scanner = new Scanner(System.in);
+        String input = scanner.nextLine();
+        int r = Integer.parseInt(input);
+        if (r > 0 && r <= max) {
+            return r;
+        } else {
+            throw new Exception();
+        }
+    }
+
 }

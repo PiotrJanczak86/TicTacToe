@@ -7,7 +7,7 @@ import java.io.ByteArrayInputStream;
 public class TicTacToeTests {
 
     @Test
-    void WrongInputTest() {
+    void wrongInputTest() {
         //Given & When
         String test = "xyz";
         ByteArrayInputStream inputStream = new ByteArrayInputStream(test.getBytes());
@@ -17,7 +17,7 @@ public class TicTacToeTests {
     }
 
     @Test
-    void HorizontalXWins3x3Test() {
+    void horizontalXWins3x3Test() {
         //Given
         Logic logic = new Logic();
         logic.newBoard3x3();
@@ -32,7 +32,7 @@ public class TicTacToeTests {
     }
 
     @Test
-    void VerticalXWins3x3Test() {
+    void verticalXWins3x3Test() {
         //Given
         Logic logic = new Logic();
         logic.newBoard3x3();
@@ -47,7 +47,7 @@ public class TicTacToeTests {
     }
 
     @Test
-    void DiagonalXWins3x3Test() {
+    void diagonalXWins3x3Test() {
         //Given
         Logic logic = new Logic();
         logic.newBoard3x3();
@@ -62,7 +62,7 @@ public class TicTacToeTests {
     }
 
     @Test
-    void HorizontalOWins3x3Test() {
+    void horizontalOWins3x3Test() {
         //Given
         Logic logic = new Logic();
         logic.newBoard3x3();
@@ -77,7 +77,7 @@ public class TicTacToeTests {
     }
 
     @Test
-    void VerticalOWins3x3Test() {
+    void verticalOWins3x3Test() {
         //Given
         Logic logic = new Logic();
         logic.newBoard3x3();
@@ -92,7 +92,7 @@ public class TicTacToeTests {
     }
 
     @Test
-    void DiagonalOWins3x3Test() {
+    void diagonalOWins3x3Test() {
         //Given
         Logic logic = new Logic();
         logic.newBoard3x3();
@@ -107,7 +107,7 @@ public class TicTacToeTests {
     }
 
     @Test
-    void LimitReached3x3Test() {
+    void limitReached3x3Test() {
         //Given
         String test = "1";
         ByteArrayInputStream inputStream = new ByteArrayInputStream(test.getBytes());
@@ -130,7 +130,7 @@ public class TicTacToeTests {
     }
 
     @Test
-    void DiagonalOWins10x10Test1() {
+    void diagonalOWins10x10Test1() {
         //Given
         Logic logic = new Logic();
         logic.newBoard10x10();
@@ -147,7 +147,7 @@ public class TicTacToeTests {
     }
 
     @Test
-    void DiagonalOWins10x10Test2() {
+    void diagonalOWins10x10Test2() {
         //Given
         Logic logic = new Logic();
         logic.newBoard10x10();
@@ -164,7 +164,7 @@ public class TicTacToeTests {
     }
 
     @Test
-    void DiagonalOWins10x10Test3() {
+    void diagonalOWins10x10Test3() {
         //Given
         Logic logic = new Logic();
         logic.newBoard10x10();
@@ -181,7 +181,7 @@ public class TicTacToeTests {
     }
 
     @Test
-    void DiagonalOWins10x10Test4() {
+    void diagonalOWins10x10Test4() {
         //Given
         Logic logic = new Logic();
         logic.newBoard10x10();
